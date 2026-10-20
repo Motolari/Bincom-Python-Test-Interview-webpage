@@ -63,4 +63,12 @@ for t in wanted: #for loop
 
 db.close() #this closes the database connection
 
+#references
+#these are the list of websites i used for aassistance
+#https://www.tutorialspoint.com/python/index.htm
+#claude.com
+#https://www.youtube.com/watch?v=jQjjqEjZK58
+#https://www.w3schools.com/
+#https://www.youtube.com/watch?v=5aYpkLfkgRE
+
 #thank you and i hope to hear from you soon.
