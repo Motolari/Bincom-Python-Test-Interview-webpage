@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Add Results for a New Polling Unit</h2>
+{% if message %}<p><b>{{ message }}</b></p>{% endif %}
+{% if error %}<p><b>{{ error }}</b></p>{% endif %}
+
+<form method="post">
+  <p>Local Government:
+  <select name="lga" required>
+    <option value="">-- choose --</option>
+    {% for l in lgas %}
+      <option value="{{ l.lga_id }}">{{ l.lga_name }}</option>
+    {% endfor %}
+  </select></p>
+  <p>Polling unit name: <input name="name" required></p>
+  <p>Polling unit number: <input name="number"></p>
+  <p>Entered by: <input name="entered_by" required></p>
+
+  <h3>Party scores</h3>
+  {% for c in codes %}
+    <p>{{ c }}: <input type="number" min="0" name="score_{{ c }}" required></p>
+  {% endfor %}
+  <button type="submit">Save</button>
+</form>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Result for a Polling Unit</h2>
+<form method="get">
+  <p>Local Government:
+  <select name="lga" onchange="this.form.submit()">
+    <option value="">-- choose --</option>
+    {% for l in lgas %}
+      <option value="{{ l.lga_id }}" {{ 'selected' if l.lga_id == lga_id }}>{{ l.lga_name }}</option>
+    {% endfor %}
+  </select></p>
+
+  {% if lga_id is not none %}
+    <p>Polling Unit:
+    <select name="pu" onchange="this.form.submit()">
+      <option value="">-- choose --</option>
+      {% for p in polling_units %}
+        <option value="{{ p.uniqueid }}" {{ 'selected' if p.uniqueid == pu_id }}>{{ p.polling_unit_name }}</option>
+      {% endfor %}
+    </select></p>
+  {% endif %}
+</form>
+
+{% if pu %}
+  <h3>{{ pu.polling_unit_name }}</h3>
+  {% if results %}
+    <table border="1" cellpadding="5">
+      <tr><th>Party</th><th>Score</th></tr>
+      {% for r in results %}
+        <tr><td>{{ r.party_abbreviation }}</td><td>{{ r.party_score }}</td></tr>
+      {% endfor %}
+    </table>
+  {% else %}
+    <p>No results for this polling unit yet.</p>
+  {% endif %}
+{% endif %}
+{% endblock %}
