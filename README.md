@@ -1,6 +1,7 @@
 HOW TO RUN MY BINCOM PYTHON TEST SOLUTION 
 BY MALAOLU TIRENIOLUWA MOTOLARI
 IDE USED IS: VISUAL STUDIO CODE
+PROGRAMMING LANGUAGE USED: PYTHON
 
 Provided is a breakdown of how to run the code:
 1. Save/download all the files in a folder then open in Visual Studio Code. The files to download are: app.py, setup_db.py, bincom_test.sql
