@@ -1,4 +1,5 @@
 HOW TO RUN MY PYTHON TEST SOLUTION BY MALAOLU TIRENIOLUWA MOTOLARI
+I used visual studio code as my IDE
 1. write pip install flask in the terminal
 2. run python setup_db.py (this will help us build bincom.db from bincom_test.sql, make sure you only run it once)
 3. run python app.py
