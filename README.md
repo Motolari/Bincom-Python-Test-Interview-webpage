@@ -13,6 +13,9 @@ Provided is a breakdown of how to run the code:
 7. open http://127.0.0.1:5000 on your browser
 
 Each page consists of the answers to:
+
 Question 1: "View a polling unit" - choose an LGA, then a polling unit, to see its result
+
 Question 2: "LGA total" - choose an LGA to see the summed result of its polling units
+
 Question 3: "Add polling unit" - store results for a new polling unit
